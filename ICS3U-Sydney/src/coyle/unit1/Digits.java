@@ -25,5 +25,6 @@ public class  Digits{
 		System.out.println("Tens: " + t);
 		int o = n%10;
 		System.out.println("Ones: " + o);
+		sc.close();
 	}
 }

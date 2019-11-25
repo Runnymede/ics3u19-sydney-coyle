@@ -22,5 +22,6 @@ public class ObjectHeight {
 		double h;
 		h =100 - 2.9 * t * t;
 		System.out.println("The height of the object is:" + h);
+		sc.close();
 	}
 }

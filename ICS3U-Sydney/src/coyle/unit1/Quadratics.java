@@ -27,5 +27,6 @@ public class  Quadratics{
 		double xx = (-b-Math.sqrt(Math.pow(b,2)-4*a*c))/(2*a);
 		System.out.print("The two roots are " + x );
 		System.out.print(" and " + xx);
+		sc.close();
 	}
 }
