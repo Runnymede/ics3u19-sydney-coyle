@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 /**
  * TicTacToe.java
- * 
+ * creates a grid and allows the user to play a game of tic tac toe
  * November 26, 2019
  * @author Sydney Coyle
  */
@@ -16,26 +16,54 @@ public class TicTacToe {
 	 */
 	public static void main(String[] args) {
 		Scanner sc = new Scanner (System.in);
-
+		//variables
 		char[][] board = new char [3][3];
+		char player = 'x';
+		int rowNum = 0;
+		int colNum = 0;
 
+		for (int turn = 0; turn <9; turn++) {
 
-		System.out.println("what row");
-		int row = sc.nextInt();
-		System.out.println("what col");
-		int col = sc.nextInt();
-		
-		board[row][col] = 'x';
-		System.out.println(board[row][col]);
+			//X's turn
+			if (player == 'x') {
+				System.out.println("what row would you like to place X");
+				rowNum = sc.nextInt();
+				System.out.println("what column would you like to place X");
+				colNum = sc.nextInt();
+				board[rowNum][colNum] = 'x';
 
-		for (int row = 0; row< board.length; row ++) {
+				//making the board
+				for (int i = 0; i< board.length; i ++) {
 
+					for  (int j = 0; j< board[i].length; j++) 
+						System.out.print(board[i][j] +" |");
+					System.out.println();
+					System.out.println("_________");
+				}
+				System.out.println();
+				player = 'o';
+			}
 
-			for  (int col = 0; col< board[row].length; col++) 
-				System.out.println(board[row][col]);
+			//O's turn
+			else {
+				System.out.println("what row would you like to place O");
+				rowNum = sc.nextInt();
+				System.out.println("what column would you like to place O");
+				colNum = sc.nextInt();
+				board[rowNum][colNum] = 'o';
+
+				//making the board
+				for (int i = 0; i< board.length; i ++) {
+
+					for  (int j = 0; j< board[i].length; j++) 
+						System.out.print(board[i][j] +" |");
+					System.out.println();
+					System.out.println("_________");
+				}
+				System.out.println();
+				player = 'x';
+			}
 		}
-		System.out.println();
+		sc.close();
 	}
-
-
 }
