@@ -16,10 +16,12 @@ public class LicenseToRide {
 	public static void main(String[]args) {
 		Scanner sc = new Scanner(System.in);
 
+		//variables
 		int total = 0;
 		double counter =0;
 		double probability;
 
+		//generating each number
 		for (int a = 9; a >= 0; a--) {
 			for (int b = 9; b >= 0; b--) {
 				for (int c = 9; c >= 0; c--) {
@@ -32,6 +34,7 @@ public class LicenseToRide {
 				}
 			}
 		}
+		//calculating probability
 		probability = counter/100;
 		System.out.println("the probability is " + probability +"%");
 		sc.close();

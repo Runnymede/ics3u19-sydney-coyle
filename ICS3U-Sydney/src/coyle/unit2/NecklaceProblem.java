@@ -19,21 +19,25 @@ public class NecklaceProblem {
 	public static void main(String[]args) {
 		Scanner sc = new Scanner(System.in);
 
+		//variable decelerations
 		int num1 = 0;
 		int num2 = 0;
 		int sum = 0;
 
+		//user input
 		System.out.println("Enter a number");
 		int input1 = sc.nextInt();
 		System.out.println("Enter another number");
 		int input2 = sc.nextInt();
 
+		//variable assignments
 		num1 = input1;
 		num2 = input2;
-
+		//printing starting values
 		System.out.println(num1);
 		System.out.println(num2);
 
+		//printing each number
 		do {
 			sum = (num1 + num2)%10;
 			System.out.println(sum);
