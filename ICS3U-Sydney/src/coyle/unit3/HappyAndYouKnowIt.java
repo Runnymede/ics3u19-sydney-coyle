@@ -1,10 +1,8 @@
 package coyle.unit3;
 
-import java.util.Scanner;
-
 /**
- * HappyAndYouKnowIt.java
- * Prints the lyrics to the song If You're Happy And You Know It
+ * HappyAndYouKnowIt.java <br>
+ * Prints the lyrics to the song If You're Happy And You Know It <br>
  * November 25, 2019
  * @author Sydney Coyle
  */
@@ -15,7 +13,6 @@ public class HappyAndYouKnowIt {
 	 *@param args unused
 	 */
 	public static void main(String[] args) {
-		Scanner sc = new Scanner (System.in);
 
 		//variables
 		String verse = "If your happy and you know it ";
@@ -35,6 +32,5 @@ public class HappyAndYouKnowIt {
 			//spaces
 			System.out.println();
 		}
-		sc.close();
 	}
 }

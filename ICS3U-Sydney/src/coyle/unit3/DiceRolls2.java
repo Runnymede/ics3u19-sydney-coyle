@@ -17,20 +17,22 @@ public class DiceRolls2 {
 		int die1 = 0;
 		int die2 = 0;
 		int total = 0;
-		int[] rollNum = {0,0,0,0,0,0,0,0,0,0,0};
+		int[] rollNum = {0,0,0,0,0,0,0,0,0,0,0,0,0};
 
 		//titles
 		System.out.format("%8s", "Total");
 		System.out.format("%19s", "Number of Rolls\n");
 
 		//random die values
-		for (int i = 1; i<=6; i++) {
+		for (int i = 2; i<=1000; i++) {
 			die1 = (int)(Math.random()*6)+1;
 			die2 = (int)(Math.random()*6)+1;
 			total = die1 + die2;
 
 			//output	
-			System.out.format("%8s", total);
+			if (i<=12)
+			System.out.format("%8s", i);
+			
 			if (total ==2)
 				rollNum[0]++;
 			
@@ -64,7 +66,9 @@ public class DiceRolls2 {
 			else if (total ==12)
 				rollNum[10]++;
 			
+			System.out.format("%16s",rollNum[i]);
 			System.out.println();
+			
 		}
 	}
 }

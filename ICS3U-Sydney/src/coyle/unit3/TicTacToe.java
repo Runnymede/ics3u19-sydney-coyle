@@ -3,8 +3,8 @@ package coyle.unit3;
 import java.util.Scanner;
 
 /**
- * TicTacToe.java
- * creates a grid and allows the user to play a game of tic tac toe
+ * TicTacToe.java <br>
+ * creates a grid and allows the user to play a game of tic tac toe <br>
  * November 26, 2019
  * @author Sydney Coyle
  */

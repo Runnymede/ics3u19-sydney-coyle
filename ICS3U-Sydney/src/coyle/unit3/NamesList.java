@@ -3,8 +3,8 @@ package coyle.unit3;
 import java.util.Scanner;
 
 /**
- * NamesList.java
- * Asks user for a set of names. prints them forwards than backwards
+ * NamesList.java <br>
+ * Asks user for a set of names. prints them forwards than backwards <br>
  * November 22, 2019
  * @author Sydney Coyle
  */
