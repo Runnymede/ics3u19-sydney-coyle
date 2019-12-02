@@ -30,7 +30,7 @@ public class TicTacToe {
 				rowNum = sc.nextInt();
 				System.out.println("what column would you like to place X");
 				colNum = sc.nextInt();
-				board[rowNum][colNum] = 'x';
+				board[rowNum-1][colNum-1] = 'x';
 
 				//making the board
 				for (int i = 0; i< board.length; i ++) {
@@ -50,7 +50,7 @@ public class TicTacToe {
 				rowNum = sc.nextInt();
 				System.out.println("what column would you like to place O");
 				colNum = sc.nextInt();
-				board[rowNum][colNum] = 'o';
+				board[rowNum-1][colNum-1] = 'o';
 
 				//making the board
 				for (int i = 0; i< board.length; i ++) {
@@ -63,7 +63,98 @@ public class TicTacToe {
 				System.out.println();
 				player = 'x';
 			}
+
+
+			//X wins
+			//horizontal
+			if (board[0][0] == 'x' && board [0][1] == 'x' && board [0][2] == 'x') {
+				System.out.println("X wins");
+				break;
+			}
+
+			else if (board[1][0] == 'x' && board [1][1] == 'x' && board [1][2] == 'x') {
+				System.out.println("X wins");
+				break;
+			}
+
+			else if (board[2][0] == 'x' && board [2][1] == 'x' && board [2][2] == 'x') {
+				System.out.println("X wins");
+				break;
+			}
+
+			//vertical
+			else if (board[0][0] == 'x' && board [1][0] == 'x' && board [2][0] == 'x') {
+				System.out.println("X wins");
+				break;
+			}
+
+			else if (board[0][1] == 'x' && board [1][1] == 'x' && board [2][1] == 'x') {
+				System.out.println("X wins");
+				break;
+			}
+
+			else if (board[0][2] == 'x' && board [1][2] == 'x' && board [2][2] == 'x') {
+				System.out.println("X wins");
+				break;
+			}
+
+			//diagonal
+			else if (board[0][0] == 'x' && board [1][1] == 'x' && board [2][2] == 'x') {
+				System.out.println("X wins");
+				break;
+			}
+
+			else if (board[2][0] == 'x' && board [1][1] == 'x' && board [0][2] == 'x') {
+				System.out.println("X wins");
+				break;
+			}
+
+
+			//O wins
+			//horizontal
+			if (board[0][0] == 'o' && board [0][1] == 'o' && board [0][2] == 'o') {
+				System.out.println("O wins");
+				break;
+			}
+
+			else if (board[1][0] == 'o' && board [1][1] == 'o' && board [1][2] == 'o') {
+				System.out.println("O wins");
+				break;
+			}
+
+			else if (board[2][0] == 'o' && board [2][1] == 'o' && board [2][2] == 'o') {
+				System.out.println("O wins");
+				break;
+			}
+
+			//vertical
+			else if (board[0][0] == 'o' && board [1][0] == 'o' && board [2][0] == 'o') {
+				System.out.println("O wins");
+				break;
+			}
+
+			else if (board[0][1] == 'o' && board [1][1] == 'o' && board [2][1] == 'o') {
+				System.out.println("O wins");
+				break;
+			}
+
+			else if (board[0][2] == 'o' && board [1][2] == 'o' && board [2][2] == 'o') {
+				System.out.println("O wins");
+				break;
+			}
+
+			//diagonal
+			else if (board[0][0] == 'o' && board [1][1] == 'o' && board [2][2] == 'o') {
+				System.out.println("O wins");
+				break;
+			}
+
+			else if (board[2][0] == 'o' && board [1][1] == 'o' && board [0][2] == 'o') {
+				System.out.println("O wins");
+				break;
+			}
 		}
+
 		sc.close();
 	}
 }

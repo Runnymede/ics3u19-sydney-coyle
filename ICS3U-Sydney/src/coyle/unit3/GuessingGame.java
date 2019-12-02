@@ -16,19 +16,27 @@ public class GuessingGame {
 	 */
 	public static void main(String[] args) {
 		Scanner sc = new Scanner (System.in);
-		
+
 		//variables
-		String input;
+		String answer = "no";
 		String[] guess = {"apple","orange","grapefruit","pineapple","grapes", "banana",
 				"mango","dragonfruit","strawberry","kiwi","pear","plum","peach",
-				"watermelon","","","","","",""};
-		
-		//
-		System.out.println("Type in a fruit and ill try to guess it");
-		input = sc.next();
-		
-		
-		
+				"watermelon","cherry","coconut","jackfruit","lime","passionfruit","lemon"};
+
+		//instructions
+		System.out.println("Think of a fruit and i'll try to guess it");
+
+
+		for (int i = 0; i < 20; i++) {
+			System.out.println("is it a "+ guess[(int)(Math.random()*20)]);	
+			answer = sc.next();
+
+			if (answer.equals("yes")) {
+				System.out.println("i win!");
+				break;
+			}
+		}
+
 		sc.close();
 	}
 }

@@ -20,55 +20,50 @@ public class DiceRolls2 {
 		int[] rollNum = {0,0,0,0,0,0,0,0,0,0,0,0,0};
 
 		//titles
-		System.out.format("%8s", "Total");
+		System.out.format("%6s", "Total");
 		System.out.format("%19s", "Number of Rolls\n");
 
 		//random die values
-		for (int i = 2; i<=1000; i++) {
+		for (int i = 2; i<=10000; i++) {
 			die1 = (int)(Math.random()*6)+1;
 			die2 = (int)(Math.random()*6)+1;
 			total = die1 + die2;
 
-			//output	
-			if (i<=12)
-			System.out.format("%8s", i);
-			
+
+			//counting totals
 			if (total ==2)
 				rollNum[0]++;
-			
+
 			else if (total ==3)
 				rollNum[1]++;
-			
+
 			else if (total ==4)
 				rollNum[2]++;
-			
+
 			else if (total ==5)
 				rollNum[3]++;
-			
+
 			else if (total ==6)
 				rollNum[4]++;
-			
+
 			else if (total ==7)
 				rollNum[5]++;
-			
+
 			else if (total ==8)
 				rollNum[6]++;
-			
+
 			else if (total ==9)
 				rollNum[7]++;
-			
+
 			else if (total ==10)
 				rollNum[8]++;
-			
+
 			else if (total ==11)
 				rollNum[9]++;
-			
+
 			else if (total ==12)
 				rollNum[10]++;
-			
-			System.out.format("%16s",rollNum[i]);
-			System.out.println();
-			
 		}
+		
 	}
 }
