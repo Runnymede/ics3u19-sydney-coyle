@@ -21,7 +21,7 @@ public class DiceRolls2 {
 
 		//titles
 		System.out.format("%6s", "Total");
-		System.out.format("%19s", "Number of Rolls\n");
+		System.out.format("%25s", "Number of Rolls\n");
 
 		//random die values
 		for (int i = 2; i<=10000; i++) {
@@ -63,6 +63,12 @@ public class DiceRolls2 {
 
 			else if (total ==12)
 				rollNum[10]++;
+		}
+		//formating and output
+		for (int i = 0; i<= 10; i++) {
+			System.out.format("%4s", i+2);
+			System.out.format("%19s", rollNum[i]);
+			System.out.println();
 		}
 		
 	}
