@@ -1,6 +1,7 @@
 package coyle.unit4;
 
 
+import java.util.Arrays;
 import java.util.Scanner;
 /**
  * MathPlus.java <br>
@@ -23,6 +24,7 @@ public class MathPlus {
 		System.out.println("How many integers do you want to print");
 		int numInt = sc.nextInt();
 		int[] num = new int[numInt];
+		double[] num2 = new double[numInt];
 
 		//asking for each integer
 		System.out.println("Enter the " +numInt+" integers one by one");
@@ -43,6 +45,9 @@ public class MathPlus {
 		System.out.println("the sum of all the numbers is " +sum(num));
 		System.out.println("the average of all the numbers is " +average(num));
 		System.out.println();
+		
+		//Extra
+		System.out.println(median(num));
 	}
 
 	/** 
@@ -51,7 +56,7 @@ public class MathPlus {
 	 *@param num 
 	 *@return the index of the first occurrence of the smallest number in the array
 	 */
-	public static int min(int num[]) {
+	public static int min(int[] num) {
 		int small =0;
 		for (int i=1; i<num.length; i++) {
 			if (num[i] < num[small])
@@ -66,7 +71,7 @@ public class MathPlus {
 	 *@param num 
 	 *@return the index of the first occurrence of the largest number in the array
 	 */
-	public static int max(int num[]) {
+	public static int max(int[] num) {
 		int big = 0;
 		for (int i=1; i<num.length; i++) {
 			if (num[i] > num[big])
@@ -80,7 +85,7 @@ public class MathPlus {
 	 *@param num 
 	 *@return the sum of all the integers in the given array
 	 */
-	public static int sum(int num[]) {
+	public static int sum(int[] num) {
 		int add = num[0];
 		for (int i=0; i<num.length-1; i++) {
 			add += num[i+1];
@@ -93,11 +98,19 @@ public class MathPlus {
 	 *@param num 
 	 *@return the average of all the integers in the given array
 	 */
-	public static int average(int num[]) {
+	public static int average(int[] num) {
 		int averageNum = sum(num)/ num.length;
 		return averageNum;
 
 	}
+	
+	
+	
+	
+	
+	
+	
+	//double integers
 	/** 
 	 *This method returns the index of the first occurrence 
 	 *of the smallest number in the array
@@ -105,12 +118,7 @@ public class MathPlus {
 	 *@return the index of the first occurrence of the smallest number in the array
 	 */
 
-
-
-
-	//double integers
-
-	public static int min(double num[]) {
+	public static int min(double[] num) {
 		int small =0;
 		for (int i=1; i<num.length; i++) {
 			if (num[i] < num[small])
@@ -125,7 +133,7 @@ public class MathPlus {
 	 *@param num 
 	 *@return the index of the first occurrence of the largest number in the array
 	 */
-	public static int max(double num[]) {
+	public static int max(double[] num) {
 		int big = 0;
 		for (int i=1; i<num.length; i++) {
 			if (num[i] > num[big])
@@ -139,7 +147,7 @@ public class MathPlus {
 	 *@param num 
 	 *@return the sum of all the integers in the given array
 	 */
-	public static double sum(double num[]) {
+	public static double sum(double[] num) {
 		double add = num[0];
 		for (int i=0; i<num.length-1; i++) {
 			add += num[i+1];
@@ -152,10 +160,45 @@ public class MathPlus {
 	 *@param num 
 	 *@return the average of all the integers in the given array
 	 */
-	public static double average(double num[]) {
+	public static double average(double[] num) {
 		double averageNum = sum(num)/ num.length;
 		return averageNum;
 
+	}
+	
+
+	
+	
+	
+	
+	/** 
+	 *This method returns the index of the first occurrence 
+	 *of the smallest number in the array
+	 *@param num 
+	 *@return the index of the first occurrence of the smallest number in the array
+	 */
+
+	public static double median(double[] num) {
+		Arrays.sort(num);
+		double median= num.length/2;
+		median = num[median];
+		return median;
+	}
+
+	/** 
+	 *This method returns the index of the first occurrence 
+	 *of the smallest number in the array
+	 *@param num 
+	 *@return the index of the first occurrence of the smallest number in the array
+	 */
+
+	public static double mode(double[] num) {
+		double same =num[0];
+		for (int i=1; i<num.length; i++) {
+			if (num[i] == num[i])
+				same = num[i];
+		}
+		return same;
 	}
 
 }
