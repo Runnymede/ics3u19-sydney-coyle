@@ -28,26 +28,26 @@ public class MathPlus {
 
 		//asking for each integer
 		System.out.println("Enter the " +numInt+" integers one by one");
-		for (int i = 0; i<numInt; i++) 
-			num[i] =  sc.nextInt();
+		for (int i = 0; i<numInt; i++) {
+			num[i] =  sc.nextInt(); 
+			num2[i]= num[i];
+		}
 		sc.close();
 
 		//Integer outputs
 		System.out.println("the minimum number is at index " +min(num));
 		System.out.println("the maximum number is at index " +max(num));
-		System.out.println("the sum of all the numbers is " +sum(num));
-		System.out.println("the average of all the numbers is " +average(num));
+		System.out.println("the sum of the numbers is " +sum(num));
+		System.out.println("the average of the numbers is " +average(num));
 		System.out.println();
 
 		//double outputs
-		System.out.println("the minimum number is at index " +min(num));
-		System.out.println("the maximum number is at index " +max(num));
-		System.out.println("the sum of all the numbers is " +sum(num));
-		System.out.println("the average of all the numbers is " +average(num));
-		System.out.println();
-		
-		//Extra
-		System.out.println(median(num));
+		System.out.println("the minimum number is at index " +min(num2));
+		System.out.println("the maximum number is at index " +max(num2));
+		System.out.println("the sum of the numbers is " +sum(num2));
+		System.out.println("the average of the numbers is " +average(num2));
+		System.out.println("the median of the numbers is " +median(num2));
+		System.out.println("is the number prime? " +prime(num));
 	}
 
 	/** 
@@ -103,13 +103,13 @@ public class MathPlus {
 		return averageNum;
 
 	}
-	
-	
-	
-	
-	
-	
-	
+
+
+
+
+
+
+
 	//double integers
 	/** 
 	 *This method returns the index of the first occurrence 
@@ -166,7 +166,7 @@ public class MathPlus {
 
 	}
 	
-
+	
 	
 	
 	
@@ -180,8 +180,9 @@ public class MathPlus {
 
 	public static double median(double[] num) {
 		Arrays.sort(num);
-		double median= num.length/2;
-		median = num[median];
+
+		int repeat= num.length/2;
+		double median = num[repeat];
 		return median;
 	}
 
@@ -193,12 +194,38 @@ public class MathPlus {
 	 */
 
 	public static double mode(double[] num) {
-		double same =num[0];
-		for (int i=1; i<num.length; i++) {
-			if (num[i] == num[i])
-				same = num[i];
-		}
-		return same;
+		
+		return 0;
 	}
+	
+	public static boolean prime (int num) {
+		Scanner sc = new Scanner(System.in);
 
+		//user input
+		System.out.println("\nEnter a number");
+		int input = sc.nextInt();
+
+		//variables
+		int div = 2;
+		int sum;
+		boolean prime = true;
+
+		//checking each number
+		while (div <input) {
+			sum = input % div;
+			div = div +1;
+
+			if (sum == 0) {
+				prime = false;
+				break;
+			}
+		}
+		//output
+		if(!prime) 
+			return false;
+
+		else
+		return true;
+		
+	}
 }
