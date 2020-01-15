@@ -2,5 +2,6 @@
 <classpath>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
 	<classpathentry kind="src" path="ICS3U-Sydney/src"/>
+	<classpathentry kind="lib" path="C:/Users/333550275/Desktop/git/hsa_new.jar"/>
 	<classpathentry kind="output" path="ICS3U-Sydney/bin"/>
 </classpath>

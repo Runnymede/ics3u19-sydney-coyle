@@ -47,7 +47,7 @@ public class MathPlus {
 		System.out.println("the sum of the numbers is " +sum(num2));
 		System.out.println("the average of the numbers is " +average(num2));
 		System.out.println("the median of the numbers is " +median(num2));
-		System.out.println("is the number prime? " +prime(num));
+	
 	}
 
 	/** 
@@ -227,5 +227,6 @@ public class MathPlus {
 		else
 		return true;
 		
-	}
+
+		}
 }
