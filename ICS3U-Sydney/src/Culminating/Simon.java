@@ -31,7 +31,7 @@ public class Simon {
 		c.println("If you get the pattern right you may move on to the next level.");
 		c.println("However, if you get it wrong, you will be sent back to level 1.");
 		c.println("Pass level 5 to win the game!");
-		Thread.sleep(1000);
+		Thread.sleep(8000);
 
 		level=1;
 		//loops each task every level
